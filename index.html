@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support My Business</title>
+    <style>
+        body { font-family: -apple-system, system-ui, sans-serif; text-align: center; padding: 40px 20px; background: #fdfdfd; color: #333; }
+        .container { max-width: 400px; margin: auto; }
+        h1 { font-size: 1.6rem; margin-bottom: 8px; }
+        .subtitle { color: #666; margin-bottom: 30px; line-height: 1.4; }
+        
+        .btn { display: flex; align-items: center; justify-content: center; width: 100%; margin: 12px 0; padding: 18px; color: white; text-decoration: none; border-radius: 16px; font-weight: 700; font-size: 1.1rem; transition: transform 0.1s; border: none; cursor: pointer; }
+        .btn:active { transform: scale(0.97); }
+        
+        .cashapp { background-color: #00D632; }
+        .venmo { background-color: #3D95CE; }
+        .zelle { background-color: #6d1ed4; }
+        
+        .copy-hint { font-size: 0.85rem; color: #999; margin-top: 4px; }
+        #status-msg { font-size: 0.9rem; color: #6d1ed4; font-weight: bold; margin-top: 10px; height: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Support My Business</h1>
+        <p class="subtitle">Thank you for your support! <br> Choose a platform below:</p>
+        
+        <!-- CASH APP -->
+        <a href="https://cash.app/$maskcasper" class="btn cashapp" target="_blank">
+            Pay with Cash App
+        </a>
+
+        <!-- VENMO -->
+        <a href="https://venmo.com/u/Caleb-Edwards-87" class="btn venmo" target="_blank">
+            Pay with Venmo
+        </a>
+        
+        <!-- ZELLE -->
+        <button class="btn zelle" onclick="copyZelle()">
+            Pay with Zelle
+        </button>
+        <p class="copy-hint">Click to copy phone: 760-415-0479</p>
+        <div id="status-msg"></div>
+    </div>
+
+    <script>
+        function copyZelle() {
+            const phone = "760-415-0479";
+            navigator.clipboard.writeText(phone).then(() => {
+                const msg = document.getElementById('status-msg');
+                msg.innerText = "Number copied!";
+                setTimeout(() => { msg.innerText = ""; }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>
