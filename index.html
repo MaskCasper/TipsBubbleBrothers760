@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support My Business</title>
     <style>
-        body { font-family: -apple-system, system-ui, sans-serif; text-align: center; padding: 40px 20px; background: #fdfdfd; color: #333; }
-        .container { max-width: 400px; margin: auto; }
-        h1 { font-size: 1.6rem; margin-bottom: 8px; }
+        /* Mobile-first and bubbly theme */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-align: center; padding: 40px 20px; background: #E0F7FA; color: #333; }
+        
+        /* Bubble pattern in background */
+        body {
+          background-image: 
+            radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1px),
+            radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1px);
+          background-size: 40px 40px, 60px 60px;
+          background-position: 0 0, 20px 20px;
+        }
+
+        .container { max-width: 400px; margin: auto; background: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { font-size: 1.8rem; margin-bottom: 5px; color: #0277BD; }
         .subtitle { color: #666; margin-bottom: 30px; line-height: 1.4; }
         
         .btn { display: flex; align-items: center; justify-content: center; width: 100%; margin: 12px 0; padding: 18px; color: white; text-decoration: none; border-radius: 16px; font-weight: 700; font-size: 1.1rem; transition: transform 0.1s; border: none; cursor: pointer; }
@@ -23,7 +34,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Support My Business</h1>
+        <h1>Bubble Brothers 760</h1>
         <p class="subtitle">Thank you for your support! <br> Choose a platform below:</p>
         
         <!-- CASH APP -->
@@ -31,7 +42,7 @@
             Pay with Cash App
         </a>
 
-        <!-- VENMO -->
+        <!-- VENMO: Placeholder. Ensure the link is updated. -->
         <a href="https://venmo.com/u/Caleb-Edwards-87" class="btn venmo" target="_blank">
             Pay with Venmo
         </a>
