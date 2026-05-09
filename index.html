@@ -1,69 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support My Business</title>
-    <style>
-        /* Mobile-first and bubbly theme */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-align: center; padding: 40px 20px; background: #E0F7FA; color: #333; }
-        
-        /* Bubble pattern in background */
-        body {
-          background-image: 
-            radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1px);
-          background-size: 40px 40px, 60px 60px;
-          background-position: 0 0, 20px 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bubble Brothers 760</title>
 
-        .container { max-width: 400px; margin: auto; background: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1 { font-size: 1.8rem; margin-bottom: 5px; color: #0277BD; }
-        .subtitle { color: #666; margin-bottom: 30px; line-height: 1.4; }
-        
-        .btn { display: flex; align-items: center; justify-content: center; width: 100%; margin: 12px 0; padding: 18px; color: white; text-decoration: none; border-radius: 16px; font-weight: 700; font-size: 1.1rem; transition: transform 0.1s; border: none; cursor: pointer; }
-        .btn:active { transform: scale(0.97); }
-        
-        .cashapp { background-color: #00D632; }
-        .venmo { background-color: #3D95CE; }
-        .zelle { background-color: #6d1ed4; }
-        
-        .copy-hint { font-size: 0.85rem; color: #999; margin-top: 4px; }
-        #status-msg { font-size: 0.9rem; color: #6d1ed4; font-weight: bold; margin-top: 10px; height: 20px; }
-    </style>
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    text-align: center;
+    padding: 25px 15px;
+    margin: 0;
+    color: #333;
+    background: linear-gradient(180deg, #dff9ff, #c6ecff);
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.8) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.6) 2px, transparent 2px);
+    background-size: 50px 50px, 80px 80px;
+    background-position: 0 0, 25px 25px;
+}
+
+.container {
+    max-width: 430px;
+    margin: auto;
+    background: rgba(255,255,255,0.96);
+    padding: 25px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #0277BD;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.hero {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.section-title {
+    margin-top: 28px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #0277BD;
+}
+
+.booking-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: transform 0.15s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.cashapp { background: #00D632; }
+.venmo { background: #3D95CE; }
+.zelle { background: #6d1ed4; }
+.call { background: #ff9800; }
+.email { background: #f06292; }
+
+.copy-hint {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+#status-msg {
+    font-size: 0.9rem;
+    color: #6d1ed4;
+    font-weight: bold;
+    height: 20px;
+    margin-top: 8px;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: #888;
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Bubble Brothers 760</h1>
-        <p class="subtitle">Thank you for your support! <br> Choose a platform below:</p>
-        
-        <!-- CASH APP -->
-        <a href="https://cash.app/$maskcasper" class="btn cashapp" target="_blank">
-            Pay with Cash App
-        </a>
 
-        <!-- VENMO: Placeholder. Ensure the link is updated. -->
-        <a href="https://venmo.com/u/Caleb-Edwards-87" class="btn venmo" target="_blank">
-            Pay with Venmo
-        </a>
-        
-        <!-- ZELLE -->
-        <button class="btn zelle" onclick="copyZelle()">
-            Pay with Zelle
-        </button>
-        <p class="copy-hint">Click to copy phone: 760-415-0479</p>
-        <div id="status-msg"></div>
-    </div>
+<div class="container">
 
-    <script>
-        function copyZelle() {
-            const phone = "760-415-0479";
-            navigator.clipboard.writeText(phone).then(() => {
-                const msg = document.getElementById('status-msg');
-                msg.innerText = "Number copied!";
-                setTimeout(() => { msg.innerText = ""; }, 3000);
-            });
-        }
-    </script>
+<h1>🫧 Bubble Brothers 760</h1>
+
+<p class="subtitle">
+Interactive bubble entertainment for kids, families & events
+</p>
+
+<p class="hero">
+Thank you for your support! Tips help keep free community bubble shows going.
+</p>
+
+<!-- TIP BUTTONS -->
+<a href="https://cash.app/$maskcasper" class="btn cashapp" target="_blank">
+💸 Tip with Cash App
+</a>
+
+<a href="https://venmo.com/u/Caleb-Edwards-87" class="btn venmo" target="_blank">
+💙 Tip with Venmo
+</a>
+
+<button class="btn zelle" onclick="copyZelle()">
+💜 Pay with Zelle (Tap to Copy Number)
+</button>
+
+<p class="copy-hint">760-415-0479</p>
+<div id="status-msg"></div>
+
+<!-- BOOKING -->
+<h2 class="section-title">📅 Book a Bubble Show</h2>
+
+<p class="booking-text">
+You can book me through text, email, or a phone call. I’m happy to help with any questions or booking details.
+</p>
+
+<a href="tel:7604150479" class="btn call">
+📞 Call or Text Me
+</a>
+
+<a href="sms:7604150479" class="btn call">
+💬 Text Me Now
+</a>
+
+<a href="mailto:bubble.brothers760@gmail.com" class="btn email">
+📧 Email Booking
+</a>
+
+<!-- INSTAGRAM -->
+<h2 class="section-title">📸 Follow</h2>
+
+<a href="https://www.instagram.com/bubble.brothers760?igsh=MzRlODBiNWFlZA==" class="btn" style="background:#E1306C;" target="_blank">
+Instagram
+</a>
+
+<!-- FOOTER -->
+<div class="footer">
+Serving San Diego County & surrounding areas 🎈
+</div>
+
+</div>
+
+<script>
+function copyZelle() {
+    const phone = "760-415-0479";
+    navigator.clipboard.writeText(phone).then(() => {
+        const msg = document.getElementById('status-msg');
+        msg.innerText = "Number copied!";
+        setTimeout(() => msg.innerText = "", 3000);
+    });
+}
+</script>
+
 </body>
 </html>
